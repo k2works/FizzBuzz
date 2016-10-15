@@ -1,1 +1,5 @@
-console.log('\'Allo \'Allo!');
+var fizzbuzz = function () {
+  return 'fizzbuzz';
+};
+
+exports.execute = fizzbuzz;
