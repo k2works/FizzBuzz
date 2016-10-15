@@ -11,10 +11,20 @@ var fizzbuzz = require('../../app/scripts/main');
 
 (function () {
   'use strict';
-  describe('Give it some context', function () {
-    describe('maybe a bit more context here', function () {
-      it('should run here few assertions', function () {
-        expect(fizzbuzz.execute()).to.equal('fizzbuzz');
+  describe('It output numbers from 1 to 100 in turn', function () {
+    describe('when it can divide 3', function () {
+      it('should put Fizz', function () {
+        expect(fizzbuzz.execute()).to.include('Fizz');
+      });
+    });
+    describe('when it can divide 5', function () {
+      it('should put Buzz', function () {
+        expect(fizzbuzz.execute()).to.include('Buzz');
+      });
+    });
+    describe('when it can divide 3 and 5', function () {
+      it('should put FizzBuzz', function () {
+        expect(fizzbuzz.execute()).to.include('FizzBuzz');
       });
     });
   });
